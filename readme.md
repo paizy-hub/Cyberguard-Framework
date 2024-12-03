@@ -74,7 +74,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 
 3. **Clone Repository**
    ```bash
-   git clone https://github.com/yourusername/chipperhub.git
+   git clone https://github.com/paizy-hub/chipperhub.git
    cd chipperhub
    ```
 
