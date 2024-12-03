@@ -119,10 +119,6 @@ The application will automatically:
 - Gina Thasafiya (4332401003)
 - Nursyafika Wahyuni (4332401007)
 
-## License
-
-[Specify your license here - e.g., MIT, GPL]
-
 ## Contributing
 
 1. Fork the repository
