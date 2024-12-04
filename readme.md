@@ -21,7 +21,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 
 ### Software Requirements
 - Python 3.8 or higher
-- XAMPP (or MySQL Server)
+- MySQL Server or XAMPP
 - Git (optional, for cloning repository)
 
 ## Installation Guide
@@ -57,6 +57,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 
 #### Linux Installation (Ubuntu/Debian)
 
+**Option 1: Install with XAMPP**
 1. **Install Python and Dependencies**
    ```bash
    sudo apt update
@@ -72,6 +73,19 @@ Chipperhub is a comprehensive desktop application developed for educational purp
    ```
    - Start MySQL and Apache modules after installation
 
+**Option 2: Install with MySQL Server**
+1. **Install Python, MySQL, and Dependencies**
+   ```bash
+   sudo apt update
+   sudo apt install python3 python3-pip python3-tk mysql-server
+   ```
+
+2. **Start MySQL Service**
+   ```bash
+   sudo systemctl start mysql
+   sudo systemctl enable mysql
+   ```
+
 3. **Clone Repository**
    ```bash
    git clone https://github.com/paizy-hub/chipperhub.git
@@ -86,8 +100,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 ### Running the Application
 
 #### Important: Before Running
-- Ensure XAMPP is running
-- MySQL service must be active
+- Ensure MySQL service is running
 
 #### Windows
 ```bash
@@ -98,23 +111,13 @@ python pbl_rks112_kel10.py
 ```bash
 python3 pbl_rks112_kel10.py
 ```
-## Usage
-
-
-
-
-## Automatic Database Creation
-
-The application will automatically:
-- Create the required database
-- Set up necessary tables
-- No manual database configuration needed
 
 ## Troubleshooting
 
-- Ensure XAMPP MySQL service is running
+- Ensure MySQL service is running
 - Verify Python dependencies are installed
-- Check that all modules are started in XAMPP
+- Check database connection settings
+- Confirm all required modules are installed
 
 ## Team Members
 
