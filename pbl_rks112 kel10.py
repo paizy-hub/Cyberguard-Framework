@@ -11,10 +11,6 @@ font2 = ('Helvetica', 11)
 font3 = ('Helvetica', 9)
 
 #SQL
-import mysql.connector
-import bcrypt
-from tkinter import messagebox
-
 def initialize_connection():
     try:
         conn = mysql.connector.connect(
