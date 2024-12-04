@@ -99,9 +99,6 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 
 ### Running the Application
 
-#### Important: Before Running
-- Ensure MySQL service is running
-
 #### Windows
 ```bash
 python pbl_rks112_kel10.py
