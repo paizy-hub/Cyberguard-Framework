@@ -101,12 +101,12 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 
 #### Windows
 ```bash
-python pbl_rks112_kel10.py
+python chipperhub.py
 ```
 
 #### Linux
 ```bash
-python3 pbl_rks112_kel10.py
+python3 chipperhub.py
 ```
 
 ## Troubleshooting
