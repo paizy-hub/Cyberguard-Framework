@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Chipperhub is a comprehensive desktop application developed for educational purposes, providing a secure and user-friendly platform for text encryption and decryption using the Substitution Cipher method.
+Chipperhub is a comprehensive desktop application developed for educational purposes, providing a secure and user-friendly platform for text encryption, decryption, and network security tools.
 
 ## Features
 
@@ -11,6 +11,9 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 - 🔤 Substitution Cipher Encryption/Decryption
 - 📋 Clipboard Integration (Copy/Paste Functionality)
 - 🖥️ Intuitive Tkinter-based User Interface
+- 🌐 Network Security Tools
+  - Port Scanning
+  - Vulnerability Checking with Nmap
 
 ## System Requirements
 
@@ -22,6 +25,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 ### Software Requirements
 - Python 3.8 or higher
 - MySQL Server or XAMPP
+- Nmap
 - Git (optional, for cloning repository)
 
 ## Installation Guide
@@ -46,13 +50,14 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 
 3. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/chipperhub.git
+   git clone https://github.com/paizy-hub/chipperhub.git
    cd chipperhub
    ```
 
 4. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
+   pip install python-nmap
    ```
 
 #### Linux Installation (Ubuntu/Debian)
@@ -61,7 +66,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 1. **Install Python and Dependencies**
    ```bash
    sudo apt update
-   sudo apt install python3 python3-pip python3-tk
+   sudo apt install python3 python3-pip python3-tk nmap
    ```
 
 2. **Install XAMPP**
@@ -77,7 +82,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 1. **Install Python, MySQL, and Dependencies**
    ```bash
    sudo apt update
-   sudo apt install python3 python3-pip python3-tk mysql-server
+   sudo apt install python3 python3-pip python3-tk mysql-server nmap
    ```
 
 2. **Start MySQL Service**
@@ -113,8 +118,9 @@ python3 chipperhub.py
 
 - Ensure MySQL service is running
 - Verify Python dependencies are installed
+- Confirm Nmap is correctly installed
 - Check database connection settings
-- Confirm all required modules are installed
+- Ensure all required modules are installed
 
 ## Team Members
 
