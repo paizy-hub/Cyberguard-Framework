@@ -22,8 +22,8 @@ def initialize_connection():
     try:
         conn = mysql.connector.connect(
             host="localhost",
-            user="root",
-	    password="sudoapt123"
+            user="root"
+	    
         )
 
         cursor = conn.cursor()
