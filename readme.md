@@ -12,8 +12,8 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 - 📋 Clipboard Integration (Copy/Paste Functionality)
 - 🖥️ Intuitive Tkinter-based User Interface
 - 🌐 Network Security Tools
-  - Port Scanning
-  - Vulnerability Checking with Nmap
+- Port Scanning
+- Vulnerability Checking with Nmap
 
 ## System Requirements
 
