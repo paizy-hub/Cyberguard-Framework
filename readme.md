@@ -11,9 +11,15 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 - 🔤 Substitution Cipher Encryption/Decryption
 - 📋 Clipboard Integration (Copy/Paste Functionality)
 - 🖥️ Intuitive Tkinter-based User Interface
-- 🌐 Network Security Tools
-- Port Scanning
-- Vulnerability Checking with Nmap
+- 🎥 Video Playback Support (Welcome Screen)
+- 🌐 Network Security Tools:
+  - Ping to Get IP Address
+  - Port Scanning
+  - Vulnerability Scanning with Nmap and Bandit
+- 🔧 Crypto Tools:
+  - Binary Text Converter
+  - Morse Code Converter
+  - Alphabet Phonetic Converter
 
 ## System Requirements
 
@@ -35,18 +41,18 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 #### Windows Installation
 
 1. **Install Python**
-   - Download Python from [Official Python Website](https://www.python.org/downloads/)
-   - During installation, check "Add Python to PATH"
+   - Download Python from [Official Python Website](https://www.python.org/downloads/).
+   - During installation, check "Add Python to PATH."
    - Verify installation by opening Command Prompt and running:
-     ```
+     ```bash
      python --version
      pip --version
      ```
 
 2. **Install XAMPP**
-   - Download XAMPP from [Apache Friends](https://www.apachefriends.org/)
-   - Install XAMPP
-   - Start Apache and MySQL modules from XAMPP Control Panel
+   - Download XAMPP from [Apache Friends](https://www.apachefriends.org/).
+   - Install XAMPP.
+   - Start Apache and MySQL modules from XAMPP Control Panel.
 
 3. **Clone the Repository**
    ```bash
@@ -76,7 +82,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
    chmod +x xampp-linux-x64-8.1.12-0-installer.run
    sudo ./xampp-linux-x64-8.1.12-0-installer.run
    ```
-   - Start MySQL and Apache modules after installation
+   - Start MySQL and Apache modules after installation.
 
 **Option 2: Install with MySQL Server**
 1. **Install Python, MySQL, and Dependencies**
@@ -116,11 +122,11 @@ python3 chipperhub.py
 
 ## Troubleshooting
 
-- Ensure MySQL service is running
-- Verify Python dependencies are installed
-- Confirm Nmap is correctly installed
-- Check database connection settings
-- Ensure all required modules are installed
+- Ensure MySQL service is running.
+- Verify Python dependencies are installed.
+- Confirm Nmap is correctly installed.
+- Check database connection settings.
+- Ensure all required modules are installed.
 
 ## Team Members
 
@@ -131,8 +137,8 @@ python3 chipperhub.py
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+1. Fork the repository.
+2. Create your feature branch.
+3. Commit your changes.
+4. Push to the branch.
+5. Open a Pull Request.
