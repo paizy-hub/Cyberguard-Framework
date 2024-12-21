@@ -6,3 +6,5 @@ pyperclip
 regex
 python-nmap
 bandit
+opencv-python
+pillow
