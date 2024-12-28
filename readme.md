@@ -1,6 +1,5 @@
 # Chipperhub - Substitution Cipher Application
-![Python Logo](https://www.python.org/static/community_logos/python-logo.png) ![Politeknik Negeri Batam Logo](https://dianisa.com/wp-content/uploads/2020/06/logo-politeknik-negeri-batam.png)
-
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png) 
 ## Project Overview
 
 Chipperhub is a comprehensive desktop application developed for educational purposes, providing a secure and user-friendly platform for text encryption, decryption, and network security tools.
