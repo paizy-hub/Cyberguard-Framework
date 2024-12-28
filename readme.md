@@ -1,5 +1,5 @@
 # Chipperhub - Substitution Cipher Application
-![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png) ![Politeknik Negeri Batam Logo](https://dianisa.com/logo-politeknik-negeri-batam/)
 
 ## Project Overview
 
