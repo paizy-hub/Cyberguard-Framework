@@ -8,8 +8,7 @@
               |_|   |_|                                
 ```
 # Substitution Cipher Application
-<img src="https://github.com/paizy-hub/chipperhub/blob/main/logopoltek.png" alt="Politeknik Negeri Batam Logo" width="200"/>
-<img src="https://github.com/paizy-hub/chipperhub/blob/main/logorks.png" alt="RK Logo" width="200"/>
+<img src="https://github.com/paizy-hub/chipperhub/blob/main/logopoltek.png" alt="Politeknik Negeri Batam Logo" width="200"/> <img src="https://github.com/paizy-hub/chipperhub/blob/main/logorks.png" alt="RK Logo" width="200"/>
 
 ## Project Overview
 
