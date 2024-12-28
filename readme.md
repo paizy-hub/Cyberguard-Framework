@@ -1,10 +1,3 @@
-  ____ _     _                       _           _     
- / ___| |__ (_)_ __  _ __   ___ _ __| |__  _   _| |__  
-| |   | '_ \| | '_ \| '_ \ / _ \ '__| '_ \| | | | '_ \ 
-| |___| | | | | |_) | |_) |  __/ |  | | | | |_| | |_) |
- \____|_| |_|_| .__/| .__/ \___|_|  |_| |_|\__,_|_.__/ 
-              |_|   |_|                                
-              
 # Substitution Cipher Application
 ![Python Logo](https://www.python.org/static/community_logos/python-logo.png) 
 ## Project Overview
