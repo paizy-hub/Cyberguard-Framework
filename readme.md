@@ -8,7 +8,9 @@
               |_|   |_|                                
 ```
 # Substitution Cipher Application
-![Python Logo](https://www.python.org/static/community_logos/python-logo.png)
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png) 
+![Politeknik Negeri Batam Logo](https://github.com/paizy-hub/chipperhub/blob/main/logopoltek.png)
+![RKS Logo](https://github.com/paizy-hub/chipperhub/blob/main/logorks.png)
 
 ## Project Overview
 
