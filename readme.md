@@ -38,7 +38,7 @@ Chipperhub is a comprehensive desktop application developed for educational purp
 - Disk Space: 100 MB free space
 
 ### Software Requirements
-- Python 3.8 or higher
+- Python 3.12
 - MySQL Server or XAMPP
 - Nmap
 - Git (optional, for cloning repository)
