@@ -29,8 +29,8 @@ def initialize_connection():
     try:
         conn = mysql.connector.connect(
             host="localhost",
-            user="root"
-            p
+            user="root",
+            password=""
         )
 
         cursor = conn.cursor()
@@ -117,61 +117,6 @@ def register(cursor, conn, data):
 
 
 #GUI
-
-class StartScreen:
-    def __init__(self, master):
-        self.master = master
-        self.master.title("Lobby ChipperhuB")
-        self.master.attributes('-fullscreen', False)  # Allow maximizing
-        self.master.configure(bg="#F0F0F0")
-        self.master.resizable(True, True)  # Allow resizing
-        self.create_widgets()
-
-    def create_widgets(self):
-        exit_button = tk.Button(self.master, text="Keluar dari Fullscreen", command=self.exit_fullscreen)
-        exit_button.pack(pady=20)
-
-    def exit_fullscreen(self):
-        self.master.attributes('-fullscreen', False)
-        self.master.geometry("800x600")
-    def create_widgets(self):
-        exit_button = tk.Button(self.master, text="Keluar dari Fullscreen", command=self.exit_fullscreen)
-        exit_button.pack(pady=20)
-
-    def exit_fullscreen(self):
-        # Mengubah ukuran jendela kembali ke ukuran normal
-        self.master.geometry("800x600")  # Mengatur ukuran jendela kembali ke 800x600
-        self.master.state('normal') 
-
-        # Menambahkan widget (misalnya tombol keluar dari fullscreen)
-        self.create_widgets()
-
-    def create_widgets(self):
-        
-        self.frame = Frame(self.master, width=500, height=500, bg='#fff')
-        self.frame.winfo_toplevel().attributes('-alpha', 0) 
-        self.frame.place(x=400, y=80)
-        self.heading = Label(self.frame, text='WELCOME TO', fg='#000000', bg='#fff', font=font1)
-        self.heading.place(x=165, y=155)
-        self.heading = Label(self.frame, text='CHIPPERHUB !', fg='#000000', bg='#fff', font=font1)
-        self.heading.place(x=165, y=200)
-
-
-        Button(self.frame, width=18, pady=3, text=' Start', bg='#F0F0F0', fg='#000000', font = font3 ,cursor='hand2', border=2, command=self.open_login_app).place(x=180, y=300)
-        Button(self.frame, width= 18, pady=3, text=' About Us', bg='#F0F0F0', fg='#000000', font= font3 ,cursor='hand2',border=2, command=self.about_us_page).place(x=180, y=350)
-
-    def open_login_app(self):
-        for widget in self.frame.winfo_children():
-            widget.destroy()
-        self.frame.destroy()
-        LoginPage(self.master)
-
-    def about_us_page(self):
-        for widget in self.frame.winfo_children():
-            widget.destroy()
-        self.frame.destroy()
-        AboutUsPage(self.master)
-
 class LoginPage:
     def __init__(self, master):
         self.master = master
@@ -205,7 +150,7 @@ class LoginPage:
         Frame(self.frame, width=180, height=2, bg='black').place(x=115, y=230)
 
         Button(self.frame, width=14, pady=7, text='Login', bg='#000000', font=font3, fg='white', cursor='hand2', border=0, command=self.signin).place(x=150, y=290)
-        Button(self.frame, width=17, pady=7, text='Back to Lobby', font=font3, bg='#000000', fg='white', cursor='hand2', border=0, command=self.back_to_lobby).place(x=140, y=380)
+        
 
         label = Label(self.frame, text="Don't have an account?", fg='black', font=font3, bg='white')
         label.place(x=89, y=340)
@@ -278,12 +223,7 @@ class LoginPage:
             widget.destroy()
         self.frame.destroy()
         RegisterPage(self.master)
-    
-    def back_to_lobby(self):
-        for widget in self.frame.winfo_children():
-            widget.destroy()
-        self.frame.destroy()
-        StartScreen(self.master)        
+         
 
 class RegisterPage:
     def __init__(self, master):
@@ -461,17 +401,30 @@ class HomePage:
 
         Button(self.frame, width=14, pady=7, text='Go to Tools', bg='#000000', fg='#fff',
                cursor='hand2', font=font3, border=0, command=self.go_to_tools).place(x=160, y=270)
-        Button(self.frame, width=14, pady=7, text='Exit', bg='#000000', fg='#fff',
-               cursor='hand2', font=font3, border=0, command=self.exit_application).place(x=160, y=310) 
+        
+        Button(self.frame, width=14, pady=7, text='About Us', bg='#000000', fg='#fff',
+               cursor='hand2', font=font3, border=0, command=self.go_to_about_us).place(x=160, y=310)
+
+        Button(self.frame, width=14, pady=7, text='Log Out', bg='#000000', fg='#fff',
+               cursor='hand2', font=font3, border=0, command=self.log_out).place(x=160, y=350) 
 
     def go_to_tools(self):
         for widget in self.frame.winfo_children():
             widget.destroy()
         self.frame.destroy()
         ToolsPage(self.master, username=self.username)
-        
-    def exit_application(self):
-        self.master.quit()
+
+    def go_to_about_us(self):
+        for widget in self.frame.winfo_children():
+            widget.destroy()
+        self.frame.destroy()
+        AboutUsPage(self.master)  # Assuming AboutUsPage is defined elsewhere
+
+    def log_out(self):
+        for widget in self.frame.winfo_children():
+            widget.destroy()
+        self.frame.destroy()
+        LoginPage(self.master)  # Redirect to the Login Page
 
 class ToolsPage:
     def __init__(self, master, username):
@@ -1220,22 +1173,22 @@ class AboutUsPage:
         self.heading.place(x=167, y=330)
         
 
-        Button(self.frame, width=14, pady=5, text='Back', bg='#000000', fg='white', font=font3,  cursor='hand2', border=0, command=self.back_to_start).place(x=148, y=380)
+        Button(self.frame, width=14, pady=5, text='Back', bg='#000000', fg='white', font=font3, cursor='hand2', border=0, command=self.back_to_home).place(x=148, y=380)
 
-    def back_to_start(self):
+    def back_to_home(self):
         for widget in self.frame.winfo_children():
             widget.destroy()
         self.frame.destroy()
-        StartScreen(self.master)
+        HomePage(self.master)
 
 if __name__ == "__main__":
     try:
         conn, cursor = initialize_connection()
         if conn and cursor:  
             root = tk.Tk()
-            video_path ="/home/paizy/Documents/chipperhub/3129671-uhd_3840_2160_30fps.mp4"
+            video_path ="3129671-uhd_3840_2160_30fps.mp4"
             initialize_video(video_path)  
-            app = StartScreen(root)
+            app = LoginPage(root)
             root.mainloop()
             if cap:  
                 cap.release()
