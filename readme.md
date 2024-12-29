@@ -1,4 +1,3 @@
-
 ```
   ____ _     _                       _           _     
  / ___| |__ (_)_ __  _ __   ___ _ __| |__  _   _| |__  
@@ -107,6 +106,46 @@ Chipperhub is a comprehensive desktop application developed for educational purp
    sudo systemctl enable mysql
    ```
 
+#### Linux Installation (Arch Linux)
+
+**Option 1: Install with XAMPP**
+1. **Install Python and Dependencies**
+   ```bash
+   sudo pacman -Syu
+   sudo pacman -S python python-pip tk nmap
+   ```
+
+2. **Install XAMPP**
+   ```bash
+   # Download XAMPP Linux Installer
+   wget https://www.apachefriends.org/xampp-files/8.1.12/xampp-linux-x64-8.1.12-0-installer.run
+   chmod +x xampp-linux-x64-8.1.12-0-installer.run
+   sudo ./xampp-linux-x64-8.1.12-0-installer.run
+   ```
+   - Start XAMPP services:
+   ```bash
+   sudo /opt/lampp/lampp start
+   ```
+
+**Option 2: Install with MariaDB (MySQL)**
+1. **Install Python, MariaDB, and Dependencies**
+   ```bash
+   sudo pacman -Syu
+   sudo pacman -S python python-pip tk mariadb nmap
+   ```
+
+2. **Initialize and Start MariaDB**
+   ```bash
+   sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+   sudo systemctl start mariadb
+   sudo systemctl enable mariadb
+   ```
+
+3. **Secure MariaDB Installation**
+   ```bash
+   sudo mysql_secure_installation
+   ```
+
 3. **Clone Repository**
    ```bash
    git clone https://github.com/paizy-hub/chipperhub.git
@@ -137,6 +176,7 @@ python3 chipperhub.py
 - Confirm Nmap is correctly installed.
 - Check database connection settings.
 - Ensure all required modules are installed.
+- For Arch Linux users: If using MariaDB, ensure it's properly configured and running before starting the application.
 
 ## Team Members
 
