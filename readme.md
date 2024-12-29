@@ -172,7 +172,7 @@ python3 chipperhub.py
 ## Troubleshooting
 
 - Ensure MySQL service is running.
-- Verify Python dependencies are installed.
+- Verify Python version and dependencies are installed.
 - Confirm Nmap is correctly installed.
 - Check database connection settings.
 - Ensure all required modules are installed.
