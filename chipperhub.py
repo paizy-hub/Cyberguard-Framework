@@ -1173,13 +1173,13 @@ class AboutUsPage:
         self.heading.place(x=167, y=330)
         
 
-        Button(self.frame, width=14, pady=5, text='Back', bg='#000000', fg='white', font=font3, cursor='hand2', border=0, command=self.back_to_home).place(x=148, y=380)
+        Button(self.frame, width=14, pady=5, text='Back', bg='#000000', fg='white', font=font3, cursor='hand2', border=0, command=self.back_to_tools).place(x=148, y=380)
 
-    def back_to_home(self):
+    def back_to_tools(self):
         for widget in self.frame.winfo_children():
             widget.destroy()
         self.frame.destroy()
-        HomePage(self.master)
+        ToolsPage(self.master)
 
 if __name__ == "__main__":
     try:
