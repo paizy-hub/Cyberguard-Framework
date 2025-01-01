@@ -127,35 +127,35 @@ class LoginPage:
         self.create_widgets()
 
     def create_widgets(self):
-        self.frame = Frame(self.master, width=425, height=500, bg="white")
+        self.frame = Frame(self.master, width=425, height=500, bg="black")
         self.frame.place(x=450, y=80)
 
-        self.heading = Label(self.frame, text='Login', fg='#000000', bg='white', font=font1)
+        self.heading = Label(self.frame, text='Login', fg='white', bg='black', font=font1)
         self.heading.place(x=164, y=50)
 
-        self.username_entry = Entry(self.frame, width=21, fg='black', border=0, bg="white", font=font2)
+        self.username_entry = Entry(self.frame, width=17, fg='black', border=0, bg="white", font=font2)
         self.username_entry.place(x=115, y=150)
         self.username_entry.insert(0, 'Username')
         self.username_entry.bind('<FocusIn>', self.on_enter)
         self.username_entry.bind('<FocusOut>', self.on_leave)
 
-        Frame(self.frame, width=180, height=2, bg='black').place(x=115, y=175)
+        Frame(self.frame, width=189, height=2, bg='white').place(x=115, y=175)
 
-        self.password_entry = Entry(self.frame, width=21, fg='black', border=0, bg="white", font=font2)
+        self.password_entry = Entry(self.frame, width=17, fg='black', border=0, bg="white", font=font2)
         self.password_entry.place(x=115, y=205)
         self.password_entry.insert(0, 'Password')
         self.password_entry.bind('<FocusIn>', self.on_enter)
         self.password_entry.bind('<FocusOut>', self.on_leave)
 
-        Frame(self.frame, width=180, height=2, bg='black').place(x=115, y=230)
+        Frame(self.frame, width=189, height=2, bg='white').place(x=115, y=230)
 
-        Button(self.frame, width=14, pady=7, text='Login', bg='#000000', font=font3, fg='white', cursor='hand2', border=0, command=self.signin).place(x=150, y=290)
+        Button(self.frame, width=14, pady=7, text='Login', bg='#fff', font=font3, fg='black', cursor='hand2', border=0, command=self.signin).place(x=150, y=290)
         
 
-        label = Label(self.frame, text="Don't have an account?", fg='black', font=font3, bg='white')
+        label = Label(self.frame, text="Don't have an account?", fg='white', font=font3, bg='black')
         label.place(x=89, y=340)
 
-        sign_up = Button(self.frame, width=6, text='Register', font=font3, border=0, bg='white', cursor='hand2', fg='blue', command=self.open_register_page)
+        sign_up = Button(self.frame, width=6, text='Register', font=font3, border=0, bg='black', cursor='hand2', fg='blue', command=self.open_register_page)
         sign_up.place(x=248, y=340)
 
     def toggle_password(self):
@@ -179,7 +179,7 @@ class LoginPage:
 
         self.toggle_button = Button(self.master, text="👁️", border=0, bg='white',fg='black', command=self.toggle_password)
         self.toggle_button.pack()
-        self.toggle_button.place(x=730, y=285)
+        self.toggle_button.place(x=720, y=285)
 
     def signin(self):
         data = {}
@@ -390,22 +390,24 @@ class HomePage:
         self.create_widgets()
 
     def create_widgets(self):
-        self.frame = Frame(self.master, width=425, height=500, bg="#fff")
+        self.frame = Frame(self.master, width=425, height=500, bg="#000000")
         self.frame.place(x=450, y=80)
 
-        self.heading = Label(self.frame, text='Welcome to the Home Page', fg='#000000', bg='#fff', font=font1)
-        self.heading.place(x=15, y=50)
+        self.heading = Label(self.frame, text='Welcome To The', fg='#fff', bg='#000000', font=font1)
+        self.heading.place(x=90, y=50)
+        self.heading = Label(self.frame, text='Home Page', fg='#fff', bg='#000000', font=font1)
+        self.heading.place(x=130, y=100)
 
-        self.username_label = Label(self.frame, text=f'Logged in as: {self.username}', fg='black', bg='white', font=font2)
-        self.username_label.place(x=15, y=115)
+        self.username_label = Label(self.frame, text=f'Logged in as: {self.username}', fg='white', bg='black', font=font2)
+        self.username_label.place(x=15, y=170)
 
-        Button(self.frame, width=14, pady=7, text='Go to Tools', bg='#000000', fg='#fff',
+        Button(self.frame, width=14, pady=7, text='Go to Tools', bg='#fff', fg='#000000',
                cursor='hand2', font=font3, border=0, command=self.go_to_tools).place(x=160, y=270)
         
-        Button(self.frame, width=14, pady=7, text='About Us', bg='#000000', fg='#fff',
+        Button(self.frame, width=14, pady=7, text='About Us', bg='#fff', fg='#000000',
                cursor='hand2', font=font3, border=0, command=self.go_to_about_us).place(x=160, y=310)
 
-        Button(self.frame, width=14, pady=7, text='Log Out', bg='#000000', fg='#fff',
+        Button(self.frame, width=14, pady=7, text='Log Out', bg='#fff', fg='#000000',
                cursor='hand2', font=font3, border=0, command=self.log_out).place(x=160, y=350) 
 
     def go_to_tools(self):
@@ -418,7 +420,7 @@ class HomePage:
         for widget in self.frame.winfo_children():
             widget.destroy()
         self.frame.destroy()
-        AboutUsPage(self.master)  # Assuming AboutUsPage is defined elsewhere
+        AboutUsPage(self.master, username=self.username)  # Assuming AboutUsPage is defined elsewhere
 
     def log_out(self):
         for widget in self.frame.winfo_children():
@@ -443,12 +445,12 @@ class ToolsPage:
         self.frame.place(relx=0.5, rely=0.5, anchor="center")
 
         # Heading
-        Label(self.frame, text="TOOLS", fg="#fff", bg="black", font=font1).grid(row=0, column=0, columnspan=2, pady=20)
+        Label(self.frame, text="Tools", fg="#fff", bg="black", font=font1).grid(row=0, column=0, columnspan=2, pady=20)
 
         # Buttons
         self.create_button("Ping to get IP", self.open_Ping_To_Get_Ip, 1)
         self.create_button("Port Scanner (nmap)", self.open_port_scanner, 2)
-        self.create_button("Vulnerability Check (updated!)", self.open_vulnerability_check, 3)
+        self.create_button("Vulnerability Check", self.open_vulnerability_check, 3)
         self.create_button("Crypto Tools", self.open_Crypto_Tools, 4)
         self.create_button("Back", self.back_to_home, 5)
 
@@ -498,7 +500,7 @@ class CryptoTools:
         self.frame.place(relx=0.5, rely=0.5, anchor="center")
 
         # Heading
-        Label(self.frame, text="CRYPTO TOOLS", fg="#fff", bg="black", font=font1).grid(row=0, column=0, columnspan=2, pady=20)
+        Label(self.frame, text="Crypto Tools", fg="#fff", bg="black", font=font1).grid(row=0, column=0, columnspan=2, pady=20)
 
         # Buttons
         self.create_button("Binary Converter", self.open_Binary_Text_Converter, 1)
@@ -554,17 +556,17 @@ class BinaryTextConverter:
 
         # Heading
         self.heading = tk.Label(self.frame, text='Binary Text Converter', fg='#000000', 
-                              bg='white', font=('Arial', 16, 'bold'))
-        self.heading.place(x=75, y=20)
+                              bg='white', font=font1)
+        self.heading.place(x=50, y=20)
 
         # Input section
         tk.Label(self.frame, text="Enter text:", bg='white', 
-                font=('Arial', 10)).place(x=27, y=80)
+                font=font2).place(x=27, y=80)
         self.text_frame = tk.Frame(self.frame, width=180, height=90, bg='black')
         self.text_frame.place(x=30, y=110)
         self.text_box = tk.Text(self.text_frame, width=32, height=4, wrap=tk.WORD, 
                                fg='black', borderwidth=2, relief="solid", bg="white", 
-                               font=('Arial', 10))
+                               font=font2)
         self.text_box.pack()
 
         # Paste button
@@ -574,7 +576,7 @@ class BinaryTextConverter:
 
         # Conversion type dropdown
         tk.Label(self.frame, text="Select conversion:", bg='white', 
-                font=('Arial', 10)).place(x=27, y=200)
+                font=font2).place(x=27, y=200)
         self.conversion_type = tk.StringVar(value="text_to_binary")
         self.conversion_menu = tk.OptionMenu(self.frame, self.conversion_type,
                                            "text_to_binary", "binary_to_text",
@@ -583,23 +585,23 @@ class BinaryTextConverter:
 
         # Action buttons
         tk.Button(self.frame, width=14, pady=7, text='Convert', bg='#000000',
-                 fg='white', cursor='hand2', border=0,
-                 command=self.convert).place(x=30, y=270)
+                 fg='white', cursor='hand2', border=0, font=font3,
+                 command=self.convert).place(x=28, y=270)
         tk.Button(self.frame, width=14, pady=7, text='Clear', bg='#000000',
-                 fg='white', cursor='hand2', border=0,
-                 command=self.reset_fields).place(x=160, y=270)
+                 fg='white', cursor='hand2', border=0,font=font3,
+                 command=self.reset_fields).place(x=159, y=270)
         tk.Button(self.frame, width=14, pady=7, text='Back', bg='#000000',
-                 fg='white', cursor='hand2', border=0,
+                 fg='white', cursor='hand2', border=0,font=font3,
                  command=self.back_to_tools).place(x=290, y=270)
 
         # Result section
         tk.Label(self.frame, text="Result:", bg='white', 
-                font=('Arial', 10)).place(x=27, y=320)
+                font=font2).place(x=27, y=320)
         self.result_frame = tk.Frame(self.frame, width=180, height=90, bg='black')
         self.result_frame.place(x=30, y=350)
         self.result_box = tk.Text(self.result_frame, width=32, height=4, wrap=tk.WORD,
                                  fg='black', borderwidth=2, relief="solid", bg="white",
-                                 font=('Arial', 10))
+                                 font=font2)
         self.result_box.pack()
         self.result_box.config(state=tk.DISABLED)
 
@@ -686,24 +688,24 @@ class MorseConverter:
         self.frame.place(x=450, y=80)
 
         tk.Label(self.frame, text="Morse Converter", bg='white', fg='black', 
-                 font=('Arial', 16, 'bold')).place(x=120, y=20)
+                 font=font1).place(x=90, y=20)
 
-        tk.Label(self.frame, text="Enter text:", bg='white', font=('Arial', 10)).place(x=27, y=80)
-        self.text_box = tk.Text(self.frame, width=32, height=4, wrap=tk.WORD, 
-                                fg='black', bg='white', font=('Arial', 10))
+        tk.Label(self.frame, text="Enter text:", bg='white', font=font2).place(x=27, y=80)
+        self.text_box = tk.Text(self.frame, width=32, height=4, wrap=tk.WORD, borderwidth=2, relief="solid", 
+                                fg='black', bg='white', font=font2)
         self.text_box.place(x=30, y=110)
 
-        tk.Label(self.frame, text="Result:", bg='white', font=('Arial', 10)).place(x=27, y=200)
-        self.result_box = tk.Text(self.frame, width=32, height=4, wrap=tk.WORD, 
-                                  fg='black', bg='white', font=('Arial', 10))
+        tk.Label(self.frame, text="Result:", bg='white', font=font2).place(x=27, y=200)
+        self.result_box = tk.Text(self.frame, width=32, height=6, wrap=tk.WORD, borderwidth=2, relief="solid",
+                                  fg='black', bg='white', font=font2)
         self.result_box.place(x=30, y=230)
         self.result_box.config(state=tk.DISABLED)
 
-        tk.Button(self.frame, text="Convert to Morse", bg='#000000', fg='white', command=self.text_to_morse).place(x=30, y=300)
-        tk.Button(self.frame, text="Convert to Text", bg='#000000', fg='white', command=self.morse_to_text).place(x=160, y=300)
-        tk.Button(self.frame, text="Clear", bg='#000000', fg='white', command=self.clear_fields).place(x=290, y=300)
+        tk.Button(self.frame, text="Convert to Morse", bg='#000000', font=font3, fg='white', command=self.text_to_morse).place(x=32, y=360)
+        tk.Button(self.frame, text="Convert to Text", bg='#000000', fg='white', font=font3, command=self.morse_to_text).place(x=190, y=360)
+        tk.Button(self.frame, text="Clear", bg='#000000', fg='white',font=font3, command=self.clear_fields).place(x=342, y=360)
 
-        tk.Button(self.frame, text="Back to Tools", bg='#000000', fg='white', command=self.back_to_tools).place(x=160, y=350)
+        tk.Button(self.frame, text="Back to Tools", bg='#000000', font=font3, fg='white', command=self.back_to_tools).place(x=164, y=425)
 
     def text_to_morse(self):
         text = self.text_box.get("1.0", "end-1c").strip().upper()
@@ -758,23 +760,22 @@ class AlphabetPhoneticConverter:
         self.frame.place(x=450, y=80)
 
         tk.Label(self.frame, text="Phonetic Converter", bg='white', fg='black', 
-                 font=('Arial', 16, 'bold')).place(x=100, y=20)
+                 font=font1).place(x=70, y=10)
 
-        tk.Label(self.frame, text="Enter text:", bg='white', font=('Arial', 10)).place(x=27, y=80)
-        self.text_box = tk.Text(self.frame, width=32, height=4, wrap=tk.WORD, 
-                                fg='black', bg='white', font=('Arial', 10))
-        self.text_box.place(x=30, y=110)
+        tk.Label(self.frame, text="Enter text:", bg='white', font=font2).place(x=27, y=100)
+        self.text_box = tk.Text(self.frame, width=32, height=5, wrap=tk.WORD, 
+                                fg='black', borderwidth=2, relief="solid", bg='white', font=font2)
+        self.text_box.place(x=30, y=130)
 
-        tk.Label(self.frame, text="Result:", bg='white', font=('Arial', 10)).place(x=27, y=200)
-        self.result_box = tk.Text(self.frame, width=32, height=4, wrap=tk.WORD, 
-                                  fg='black', bg='white', font=('Arial', 10))
-        self.result_box.place(x=30, y=230)
+        tk.Label(self.frame, text="Result:", bg='white', font=font2).place(x=27, y=240)
+        self.result_box = tk.Text(self.frame, width=32, height=5, wrap=tk.WORD, 
+                                  fg='black', bg='white', borderwidth=2, relief="solid" ,font=font2) 
+        self.result_box.place(x=30, y=270)
         self.result_box.config(state=tk.DISABLED)
 
-        tk.Button(self.frame, text="Convert to Phonetic", bg='#000000', fg='white', command=self.text_to_phonetic).place(x=30, y=300)
-        tk.Button(self.frame, text="Clear", bg='#000000', fg='white', command=self.clear_fields).place(x=160, y=300)
-
-        tk.Button(self.frame, text="Back to Tools", bg='#000000', fg='white', command=self.back_to_tools).place(x=160, y=350)
+        tk.Button(self.frame, text="Convert to Phonetic", font=font3, border=0, bg='#000000', fg='white', command=self.text_to_phonetic).place(x=30, y=380)
+        tk.Button(self.frame, text="Clear", bg='#000000', font=font3, border=0, fg='white', command=self.clear_fields).place(x=178, y=380)
+        tk.Button(self.frame, text="Back to Tools", bg='#000000', font=font3, border=0, fg='white', command=self.back_to_tools).place(x=160, y=430)
 
     def text_to_phonetic(self):
         text = self.text_box.get("1.0", "end-1c").strip().upper()
@@ -949,26 +950,26 @@ class PingToGetIP:
         self.frame = tk.Frame(self.master, width=425, height=500, bg="#000000")
         self.frame.place(x=450, y=80)
 
-        self.heading = tk.Label(self.frame, text='Ping to Get IP', fg='#fff', bg='black', font=('Arial', 16, 'bold'))
+        self.heading = tk.Label(self.frame, text='Ping to Get IP', fg='#fff', bg='black', font=font1)
         self.heading.place(x=120, y=20)
 
-        tk.Label(self.frame, text="Enter the Web Domain:", bg='black', fg='white', font=('Arial', 10)).place(x=27, y=80)
-        self.domain_entry = tk.Entry(self.frame, width=30, borderwidth=2, relief="solid", fg='black', bg='white', font=('Arial', 10))
+        tk.Label(self.frame, text="Enter the Web Domain:", bg='black', fg='white', font=font2).place(x=27, y=80)
+        self.domain_entry = tk.Entry(self.frame, width=33, borderwidth=2, relief="solid", fg='black', bg='white', font=font2)
         self.domain_entry.place(x=30, y=110)
 
         tk.Button(self.frame, width=14, pady=7, text='Get IP', bg='#fff', fg='black', 
-                  cursor='hand2', font=('Arial', 10), border=0, command=self.get_ip).place(x=160, y=150)
+                  cursor='hand2', font=font3, border=0, command=self.get_ip).place(x=160, y=140)
 
-        tk.Label(self.frame, text="Results:", bg='black', fg='white', font=('Arial', 10)).place(x=27, y=200)
+        tk.Label(self.frame, text="Results:", bg='black', fg='white', font=font2).place(x=27, y=200)
         self.result_frame = tk.Frame(self.frame, width=280, height=150, bg='#000000')
         self.result_frame.place(x=30, y=230)
-        self.result_box = tk.Text(self.result_frame, width=30, height=10, wrap=tk.WORD, fg='#000000', 
-                                  borderwidth=2, relief="solid", bg="white", font=('Arial', 10))
+        self.result_box = tk.Text(self.result_frame, width=33, height=10, wrap=tk.WORD, fg='#000000', 
+                                  borderwidth=2, relief="solid", bg="white", font=font2)
         self.result_box.pack()
         self.result_box.config(state=tk.DISABLED)
 
         tk.Button(self.frame, width=14, pady=7, text='Back', bg='#fff', fg='#000000', 
-                  cursor='hand2', font=('Arial', 10), border=0, command=self.back_to_tools).place(x=160, y=450) 
+                  cursor='hand2', font=font3, border=0, command=self.back_to_tools).place(x=160, y=440) 
 
     def get_ip(self):
         domain = self.domain_entry.get().strip()
@@ -1015,22 +1016,22 @@ class PortScan:
         self.heading.place(x=120, y=20)
 
         Label(self.frame, text="Enter the IP Address:", bg='black', fg= 'white', font=font2).place(x=27, y=80)
-        self.ip_entry = Entry(self.frame, width=30, borderwidth=2, relief="solid", fg='black', bg='white', font=font2)
+        self.ip_entry = Entry(self.frame, width=33, borderwidth=2, relief="solid", fg='black', bg='white', font=font2)
         self.ip_entry.place(x=30, y=110)
 
         Button(self.frame, width=14, pady=7, text='Scan Ports', bg='#fff', fg='black', 
-               cursor='hand2', font=font3, border=0, command=self.scan_ports).place(x=160, y=150)
+               cursor='hand2', font=font3, border=0, command=self.scan_ports).place(x=160, y=140)
 
         Label(self.frame, text="Results:", bg='black',fg='white', font=font2).place(x=27, y=200)
         self.result_frame = Frame(self.frame, width=280, height=150, bg='#000000')
         self.result_frame.place(x=30, y=230)
-        self.result_box = Text(self.result_frame, width=30, height=10, wrap=WORD, fg='#000000', 
+        self.result_box = Text(self.result_frame, width=33, height=10, wrap=WORD, fg='#000000', 
                                borderwidth=2, relief="solid", bg="white", font=font2)
         self.result_box.pack()
         self.result_box.config(state=DISABLED)
 
         Button(self.frame, width=14, pady=7, text='Back', bg='#fff', fg='#000000', 
-               cursor='hand2', font=font3, border=0, command=self.back_to_tools).place(x=160, y=450) 
+               cursor='hand2', font=font3, border=0, command=self.back_to_tools).place(x=160, y=440) 
 
     def scan_ports(self):
         ip_address = self.ip_entry.get().strip()
@@ -1081,11 +1082,11 @@ class VulnerabilityCheck:
         self.heading.place(x=80, y=20)
 
         Label(self.frame, text="Enter the file/directory path:", bg='black', fg='white', font=font2).place(x=27, y=80)
-        self.ip_entry = Entry(self.frame, width=30, borderwidth=2, relief="solid", fg='black', bg='white', font=font2)
+        self.ip_entry = Entry(self.frame, width=35, borderwidth=2, relief="solid", fg='black', bg='white', font=font2)
         self.ip_entry.place(x=30, y=110)
 
-        Button(self.frame, width=14, pady=7, text='Check Vulnerabilities', bg='#fff', fg='black', 
-               cursor='hand2', font=font3, border=0, command=self.check_vulnerabilities).place(x=160, y=150)
+        Button(self.frame, width=18, pady=7, text='Check Vulnerabilities', bg='#fff', fg='black', 
+               cursor='hand2', font=font3, border=0, command=self.check_vulnerabilities).place(x=160, y=140)
 
         Label(self.frame, text="Results:", bg='black', fg='white', font=font2).place(x=27, y=200)
 
@@ -1098,7 +1099,7 @@ class VulnerabilityCheck:
         self.scrollbar.pack(side=RIGHT, fill=Y)
 
         # Memperbesar ukuran Text widget
-        self.result_box = Text(self.result_frame, width=38, height=12, wrap=WORD, fg='#000000', 
+        self.result_box = Text(self.result_frame, width=35, height=12, wrap=WORD, fg='#000000', 
                                borderwidth=2, relief="solid", bg="white", font=font2, yscrollcommand=self.scrollbar.set)
         self.result_box.pack()
         self.result_box.config(state=DISABLED)
@@ -1107,7 +1108,7 @@ class VulnerabilityCheck:
         self.scrollbar.config(command=self.result_box.yview)
 
         Button(self.frame, width=14, pady=7, text='Back', bg='#fff', fg='#000000', 
-               cursor='hand2', font=font3, border=0, command=self.back_to_tools).place(x=160, y=450)
+               cursor='hand2', font=font3, border=0, command=self.back_to_tools).place(x=175, y=480)
 
     def check_vulnerabilities(self):
         file_path = self.ip_entry.get().strip()
@@ -1139,12 +1140,13 @@ class VulnerabilityCheck:
         ToolsPage(self.master, username=self.username)
 
 class AboutUsPage:
-    def __init__(self, master):
+    def __init__(self, master, username):
         self.master = master
         self.master.title('About Us')
         self.master.attributes('-fullscreen', False)  # Allow maximizing
         self.master.configure(bg="#000000")
         self.master.resizable(True, True)  # Allow resizing
+        self.username = username
         self.create_widgets()
 
     def create_widgets(self):
@@ -1171,22 +1173,22 @@ class AboutUsPage:
         self.heading.place(x=140, y=303)
         self.heading = Label(self.frame, text= (4332401007), font=font3)
         self.heading.place(x=167, y=330)
+
         
-
-        Button(self.frame, width=14, pady=5, text='Back', bg='#000000', fg='white', font=font3, cursor='hand2', border=0, command=self.back_to_tools).place(x=148, y=380)
-
-    def back_to_tools(self):
+        Button (self.frame, width=14, pady=5, text='Back', bg='#000000', fg='white', font=font3, cursor='hand2', border=0, command=self.back_to_home).place(x=148, y=380)
+      
+    def back_to_home(self):
         for widget in self.frame.winfo_children():
             widget.destroy()
         self.frame.destroy()
-        ToolsPage(self.master)
+        HomePage(self.master, username=self.username)
 
 if __name__ == "__main__":
     try:
         conn, cursor = initialize_connection()
         if conn and cursor:  
             root = tk.Tk()
-            video_path ="3129671-uhd_3840_2160_30fps.mp4"
+            video_path ="vidio.mp4"
             initialize_video(video_path)  
             app = LoginPage(root)
             root.mainloop()
