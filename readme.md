@@ -1,9 +1,9 @@
-# Substitution Cipher Application
+# CYBERGUARD-FRAMEWORKS
 <img src="https://github.com/paizy-hub/chipperhub/blob/main/logopoltek.png" alt="Politeknik Negeri Batam Logo" width="200"/> <img src="https://github.com/paizy-hub/chipperhub/blob/main/logorks.png" alt="RK Logo" width="200"/>
 
 ## Project Overview
 
-Cyberguard Framework is a comprehensive desktop application developed for educational purposes, providing a secure and user-friendly platform for text encryption, decryption, and network security tools.
+Cyberguard Frameworks is a comprehensive desktop application developed for educational purposes, providing a secure and user-friendly platform for text encryption, decryption, and network security tools.
 
 ## Features
 
@@ -153,12 +153,12 @@ Cyberguard Framework is a comprehensive desktop application developed for educat
 
 #### Windows
 ```bash
-python chipperhub.py
+python Cyberguard-frameworks.py
 ```
 
 #### Linux
 ```bash
-python3 chipperhub.py
+python3 Cyberguard-frameworks.py
 ```
 
 ## Troubleshooting
