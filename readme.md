@@ -57,8 +57,8 @@ Cyberguard Frameworks is a comprehensive desktop application developed for educa
 
 3. **Clone the Repository**
    ```bash
-   git clone https://github.com/paizy-hub/chipperhub.git
-   cd chipperhub
+   git clone https://github.com/paizy-hub/Cyberguard-Frameworks.git
+   cd Cyberguard-Frameworks
    ```
 
 4. **Install Dependencies**
@@ -140,8 +140,8 @@ Cyberguard Frameworks is a comprehensive desktop application developed for educa
 
 3. **Clone Repository**
    ```bash
-   git clone https://github.com/paizy-hub/chipperhub.git
-   cd chipperhub
+   git clone https://github.com/paizy-hub/Cyberguard-Frameworks.git
+   cd Cyberguard-Frameworks
    ```
 
 4. **Install Python Dependencies**
