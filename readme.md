@@ -1,17 +1,9 @@
-```
-  ____ _     _                       _           _     
- / ___| |__ (_)_ __  _ __   ___ _ __| |__  _   _| |__  
-| |   | '_ \| | '_ \| '_ \ / _ \ '__| '_ \| | | | '_ \ 
-| |___| | | | | |_) | |_) |  __/ |  | | | | |_| | |_) |
- \____|_| |_|_| .__/| .__/ \___|_|  |_| |_|\__,_|_.__/ 
-              |_|   |_|                                
-```
 # Substitution Cipher Application
 <img src="https://github.com/paizy-hub/chipperhub/blob/main/logopoltek.png" alt="Politeknik Negeri Batam Logo" width="200"/> <img src="https://github.com/paizy-hub/chipperhub/blob/main/logorks.png" alt="RK Logo" width="200"/>
 
 ## Project Overview
 
-Chipperhub is a comprehensive desktop application developed for educational purposes, providing a secure and user-friendly platform for text encryption, decryption, and network security tools.
+Cyberguard Framework is a comprehensive desktop application developed for educational purposes, providing a secure and user-friendly platform for text encryption, decryption, and network security tools.
 
 ## Features
 
