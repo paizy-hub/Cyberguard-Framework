@@ -153,12 +153,12 @@ Cyberguard Frameworks is a comprehensive desktop application developed for educa
 
 #### Windows
 ```bash
-python Cyberguard-frameworks.py
+python Cyberguard-Frameworks.py
 ```
 
 #### Linux
 ```bash
-python3 Cyberguard-frameworks.py
+python3 Cyberguard-Frameworks.py
 ```
 
 ## Troubleshooting
